@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { HousingLocationComponent } from './pages/housing-location/housing-location.component';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    NgbModule,
+    RouterOutlet,
+    RouterLink,
+    HomeComponent,
+    HousingLocationComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-angular';
+  title = 'Ng';
+  constructor(private modalService: NgbModal) {}
 }
