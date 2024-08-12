@@ -28,4 +28,8 @@ export class HomeComponent implements OnInit {
   onSearchHousingLocation(name: string) {
     this.housingLocationList = this.housingService.searchHousingLocations(name);
   }
+
+  onNofity(event: HousingLocation) {
+    console.log('==emit event', event);
+  }
 }

@@ -4,7 +4,7 @@
         <button class="primary" type="button" (click)="onSearchHousingLocation(filter.value)">Search</button>
     </form>
     <div class="results">
-        <app-housing-location [housingLocation]="housingLocation"
+        <app-housing-location [housingLocation]="housingLocation" (notify)="onNofity($event)"
             *ngFor="let housingLocation of housingLocationList"></app-housing-location>
     </div>
 </section>
