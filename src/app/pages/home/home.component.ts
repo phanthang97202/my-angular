@@ -3,11 +3,12 @@ import { HousingLocation } from '../../types/housinglocation';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
 import { HousingService } from '../../services/housing.service';
+import { PopupComponent } from '../../components/popup.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HousingLocationComponent],
+  imports: [CommonModule, HousingLocationComponent, PopupComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -112,14 +112,14 @@ export class HousingService {
   ];
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
-    const promise = fetch(this.apiUrl)
-      .then((res) => res.json())
-      .then((res) => {
-        return res;
-      });
-    return await promise;
-    // const lst = this.housingLocationList;
-    // return lst;
+    // const promise = fetch(this.apiUrl)
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     return res;
+    //   });
+    // return await promise;
+    const lst = this.housingLocationList;
+    return lst;
   }
 
   getHousingLocationById(id: number): HousingLocation | undefined {

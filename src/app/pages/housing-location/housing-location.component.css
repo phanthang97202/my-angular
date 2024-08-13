@@ -24,8 +24,4 @@
     padding-left: 20px;
     text-decoration: none;
     color: blue;
-  }
-  section.listing a::after {
-    content: "\203A";
-    margin-left: 5px;
-  }
+  } 
