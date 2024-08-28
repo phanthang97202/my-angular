@@ -7,7 +7,7 @@ import { ClickTrackerDirective } from '../../directives/click-tracker.directive'
   imports: [ClickTrackerDirective],
   template: `
     <div>
-      <p>about works!</p>
+      <p #eleP>about works!</p>
       <div>
         <input type="radio" name="color" (click)="handleClick('yellow')" />
         Yellow
@@ -15,7 +15,7 @@ import { ClickTrackerDirective } from '../../directives/click-tracker.directive'
         <input type="radio" name="color" (click)="handleClick('blue')" /> Blue
       </div>
       <p [style.color]="color">{{ color }}</p>
-      <p [clickTrackerDirective]="color">
+      <p clickTrackerDirective [color]="color" [eleValue]="eleP">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate
         aliquam aperiam! Saepe atque laborum quisquam perferendis, eius fugit,
         doloribus incidunt laudantium neque maiores enim odit. Natus
